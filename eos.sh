@@ -1,5 +1,5 @@
 #!/bin/sh
-# Last Updated Wed Jul  2 01:09:00 EEST 2014
+# Last Updated Wed Jul  2 01:10:00 EEST 2014
 
 foo=$(sed "2 s/Last Updated.*/Last Updated `date`/" <eos.sh)
 echo "$foo" > eos.sh
