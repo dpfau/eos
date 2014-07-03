@@ -9,7 +9,7 @@
 #
 # David Pfau, waiting for a connecting flight in Fiumicino, 1 July 2014
 #
-# Last Updated Wed Jul  2 23:54:14 EDT 2014
+# Last Updated Thu Jul  3 12:59:51 EDT 2014
 
 foo=$(sed "12 s/Last Updated.*/Last Updated `date`/" <eos.sh)
 echo "$foo" > eos.sh
