@@ -6,7 +6,7 @@
 #
 # David Pfau, waiting for a connecting flight in Fiumicino, 1 July 2014
 #
-# Last Updated Thu Jul  3 23:33:11 EDT 2014
+# Last Updated Fri Jul  4 03:55:49 UTC 2014
 
 folder='/home/ec2-user/eos'
 foo=$(sed "9 s/Last Updated.*/Last Updated `date`/" <$folder/eos.sh)
