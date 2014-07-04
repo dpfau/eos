@@ -15,12 +15,12 @@ foo=$(sed "9 s/Last Updated.*/Last Updated `date`/" <eos.sh)
 echo "$foo" > eos.sh
 
 crontab -r # Kill current cron jobs
-foo=$(expr $(date +%w) + 1) # Day of the week + 1 (ok since +%w returns 0-6, but cron recognizes 0-7), used to insure we don't execute twice in one day.
+dow=$(expr $(date +%w) + 1) # Day of the week + 1 (ok since +%w returns 0-6, but cron recognizes 0-7), used to insure we don't execute twice in one day.
 
 l=12765843;
 curl -s http://weather.yahooapis.com/forecastrss?w=$l | 
 	grep astronomy | 
-	awk -v foo=$foo -v folder=$folder -F'\"|:| ' '{print $5 " " $4 " * * " foo " " folder "/eos.sh > " folder "/eos.log 2>&1";}' |
+	awk -v foo=$foo -v folder=$folder -F'\"|:| ' '{print $5 " " $4 " * * " dow " " folder "/eos.sh > " folder "/eos.log 2>&1";}' |
 	crontab
 
 
