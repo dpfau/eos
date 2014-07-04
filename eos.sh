@@ -20,7 +20,7 @@ dow=$(expr $(date +%w) + 1) # Day of the week + 1 (ok since +%w returns 0-6, but
 l=12765843;
 curl -s http://weather.yahooapis.com/forecastrss?w=$l | 
 	grep astronomy | 
-	awk -v foo=$foo -v folder=$folder -F'\"|:| ' '{print $5 " " $4 " * * " dow " " folder "/eos.sh > " folder "/eos.log 2>&1";}' |
+	awk -v dow=$dow -v folder=$folder -F'\"|:| ' '{print $5 " " $4 " * * " dow " " folder "/eos.sh > " folder "/eos.log 2>&1";}' |
 	crontab
 
 
