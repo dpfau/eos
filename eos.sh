@@ -6,7 +6,7 @@
 #
 # David Pfau, waiting for a connecting flight in Fiumicino, 1 July 2014
 #
-# Last Updated Sat Nov  1 07:31:01 UTC 2014
+# Last Updated Sun Nov  2 07:33:01 UTC 2014
 
 folder='/home/ec2-user/eos'
 cd $folder
